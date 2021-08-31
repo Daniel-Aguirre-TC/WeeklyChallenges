@@ -688,28 +688,34 @@
     ]
   },
   "packageFolders": {
-    "/Users/whitstroup/.nuget/packages/": {},
-    "/usr/local/share/dotnet/sdk/NuGetFallbackFolder": {}
+    "C:\\Users\\Second-Desktop\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {},
+    "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/whitstroup/repos/WeeklyChallenges/ChallengesWithTestsMark8/ChallengesWithTestsMark8.csproj",
+      "projectUniqueName": "C:\\Users\\Second-Desktop\\repos\\WeeklyChallenges\\ChallengesWithTestsMark8\\ChallengesWithTestsMark8.csproj",
       "projectName": "ChallengesWithTestsMark8",
-      "projectPath": "/Users/whitstroup/repos/WeeklyChallenges/ChallengesWithTestsMark8/ChallengesWithTestsMark8.csproj",
-      "packagesPath": "/Users/whitstroup/.nuget/packages/",
-      "outputPath": "/Users/whitstroup/repos/WeeklyChallenges/ChallengesWithTestsMark8/obj/",
+      "projectPath": "C:\\Users\\Second-Desktop\\repos\\WeeklyChallenges\\ChallengesWithTestsMark8\\ChallengesWithTestsMark8.csproj",
+      "packagesPath": "C:\\Users\\Second-Desktop\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Second-Desktop\\repos\\WeeklyChallenges\\ChallengesWithTestsMark8\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
-        "/usr/local/share/dotnet/sdk/NuGetFallbackFolder"
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
+        "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\"
       ],
       "configFilePaths": [
-        "/Users/whitstroup/.config/NuGet/NuGet.Config"
+        "C:\\Users\\Second-Desktop\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
       ],
       "originalTargetFrameworks": [
         "netcoreapp2.1"
       ],
       "sources": {
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
@@ -745,7 +751,7 @@
         ],
         "assetTargetFallback": true,
         "warn": true,
-        "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/5.0.203/RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.301\\RuntimeIdentifierGraph.json"
       }
     }
   }
