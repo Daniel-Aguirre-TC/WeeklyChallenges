@@ -51,6 +51,6 @@ namespace ChallengesWithTestsMark8
         public int Factorial(int number)
         {
            return number == 0 ? 1 : Enumerable.Range(1, number).Aggregate((x, i) => x * i);
-    }
+        }
     }
 }

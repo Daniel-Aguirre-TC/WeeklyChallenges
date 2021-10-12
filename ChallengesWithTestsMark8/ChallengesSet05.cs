@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace ChallengesWithTestsMark8
 {
@@ -7,37 +8,41 @@ namespace ChallengesWithTestsMark8
     {
         public int GetNextNumberDivisibleByN(int startNumber, int n)
         {
-            throw new NotImplementedException();
+            return Enumerable.Range(++startNumber, startNumber + n).Where(x => x % n == 0).First();
         }
 
         public void ChangeNamesOfBusinessesWithNoRevenueTo_CLOSED(Business[] businesses)
         {
-            throw new NotImplementedException();
+            businesses.Where(x => !(x.TotalRevenue > 0)).Select(x => x.Name = "CLOSED").ToList();
         }
 
         public bool IsAscendingOrder(int[] numbers)
         {
-            throw new NotImplementedException();
+            return numbers != null && numbers.Length > 0 && numbers.SequenceEqual(numbers.OrderBy(x => x));            
         }
 
         public int SumElementsThatFollowAnEven(int[] numbers)
         {
-            throw new NotImplementedException();
+            return numbers == null ? 0 : numbers.Where((x, i) => i != 0 && numbers[i - 1] % 2 == 0).Sum(x => x);
         }
 
         public string TurnWordsIntoSentence(string[] words)
         {
-            throw new NotImplementedException();
+            return words == null || words.Where(x => x.Trim() != "").Count() == 0 ? 
+                                    "" : string.Join(' ', words.Where(x => x.Trim() != "").
+                                         Select(x => x.Trim())) + ".";
         }
 
         public double[] GetEveryFourthElement(List<double> elements)
         {
-            throw new NotImplementedException();
+            return elements == null ? new double[] { } : elements.Where(x => x % 4 == 0).ToArray();
         }
 
         public bool TwoDifferentElementsInArrayCanSumToTargetNumber(int[] nums, int targetNumber)
         {
-            throw new NotImplementedException();
+
+            return nums.Select((a, i) => nums.Where((check, index) => index != i).
+                            Select(b => a + b).Contains(targetNumber)).Any(result => result);
         }
     }
 }
