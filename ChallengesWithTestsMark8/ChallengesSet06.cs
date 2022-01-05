@@ -8,8 +8,9 @@ namespace ChallengesWithTestsMark8
     {
         public bool CollectionContainsWord(IEnumerable<string> words, string word, bool ignoreCase)
         {
-            return words != null && (ignoreCase ? words.Where(w => w != null).Select(x => 
-                            x.ToLower()).Contains(word.ToLower()) : words.Contains(word));
+            return words != null && (ignoreCase ? 
+                             words.Where(w => w != null).Select(x => x.ToLower()).Contains(word.ToLower()) 
+                             : words.Contains(word));
         }
 
         public bool IsPrimeNumber(int num)
@@ -19,9 +20,12 @@ namespace ChallengesWithTestsMark8
 
         public int IndexOfLastUniqueLetter(string str)
         {
-           var unique = str.Where((x, i) => str.Remove(i, 1).Contains(x) == false);
-            return unique.Count() == 0 ? -1 : str.IndexOf(unique.Last());
+
+           var uniqueChars = str.Where((x, i) => str.Remove(i, 1).Contains(x) == false);
+
+            return uniqueChars.Count() == 0 ? -1 : str.IndexOf(uniqueChars.Last());
         }
+
 
         public int MaxConsecutiveCount(int[] numbers)
         {
@@ -34,12 +38,20 @@ namespace ChallengesWithTestsMark8
                 }
                 return count;
             }).Max();
+
+            /*
+              return numbers.Where((x, i) => i != 0
+                                        && i < numbers.Length - 1 
+                                        && x == numbers[i + 1]
+                                        && x == numbers[i-1]
+                                      ).Count() + 2;
+            */
         }
 
         public double[] GetEveryNthElement(List<double> elements, int n)
         {
-            return elements == null  || n <= 0 ? 
-                new double[] { } : elements.Where((x, i) => (i+1) % n == 0).ToArray();
+            return elements == null  || n <= 0 ? new double[] { } 
+                                                : elements.Where((x, i) => (i+1) % n == 0).ToArray();
         }
     }
 }
